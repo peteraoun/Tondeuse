@@ -23,4 +23,9 @@ class OrientationTest {
         assertEquals(Orientation.E, Orientation.S.turnLeft());
         assertEquals(Orientation.S, Orientation.W.turnLeft());
     }
+
+    @Test
+    public void testValueOfWithInvalidInput() {
+        assertThrows(IllegalArgumentException.class, () -> Orientation.valueOf("InvalidOrientation"));
+    }
 }
