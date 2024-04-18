@@ -1,6 +1,6 @@
 package main.java.test;
 
-import main.orientation.Orientation;
+import main.java.orientation.Orientation;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

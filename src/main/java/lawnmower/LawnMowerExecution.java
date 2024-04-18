@@ -1,6 +1,6 @@
-package main.lawnmower;
+package main.java.lawnmower;
 
-import main.orientation.Orientation;
+import main.java.orientation.Orientation;
 
 import java.io.File;
 import java.io.FileNotFoundException;
