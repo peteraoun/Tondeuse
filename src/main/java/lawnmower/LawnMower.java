@@ -1,6 +1,6 @@
-package main.java.lawnmower;
+package lawnmower;
 
-import main.java.orientation.Orientation;
+import orientation.Orientation;
 
 public class LawnMower {
     private int x;
@@ -48,7 +48,7 @@ public class LawnMower {
                 break;
         }
 
-        // Ensure the mower stays within the lawn boundaries
+        // Pour que la tondeuse reste à l'intérieur des limites de la pelouse
         if (x < 0) x = 0;
         if (x > maxX) x = maxX;
         if (y < 0) y = 0;

@@ -1,15 +1,16 @@
-package main.java.test;
+package test;
 
-import main.java.lawnmower.LawnMower;
-import main.java.orientation.Orientation;
-import org.junit.jupiter.api.Test;
+import lawnmower.LawnMower;
+import org.junit.Test;
+import orientation.Orientation;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
-class LawnMowerTest {
+
+public class LawnMowerTest {
     
     @Test
-    void testMove() {
+    public void testMove() {
         // Arrange
         LawnMower lawnMower = new LawnMower(1, 2, Orientation.N);
         
@@ -21,7 +22,7 @@ class LawnMowerTest {
     }
     
     @Test
-    void testMoveForward() {
+    public void testMoveForward() {
         // Arrange
         LawnMower lawnMower = new LawnMower(1, 2, Orientation.N);
         
@@ -34,7 +35,7 @@ class LawnMowerTest {
 
     // Test for moving the lawn mower outside the boundaries
     @Test
-    void testMoveForwardOutsideBoundary() {
+    public void testMoveForwardOutsideBoundary() {
         // Arrange
         LawnMower lawnMower = new LawnMower(5, 5, Orientation.N);
         
@@ -46,7 +47,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testMoveWithNoInstructions() {
+    public void testMoveWithNoInstructions() {
         // Arrange
         LawnMower lawnMower = new LawnMower(1, 2, Orientation.N);
 
@@ -58,7 +59,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testMoveOffTheLawn() {
+    public void testMoveOffTheLawn() {
         // Arrange
         LawnMower lawnMower = new LawnMower(5, 5, Orientation.N);
 
@@ -70,7 +71,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testMoveStraight() {
+    public void testMoveStraight() {
         // Arrange
         LawnMower lawnMower = new LawnMower(1, 2, Orientation.N);
 
@@ -82,7 +83,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testTurnRight() {
+    public void testTurnRight() {
         // Arrange
         LawnMower lawnMower = new LawnMower(1, 2, Orientation.N);
 
@@ -94,7 +95,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testTurnLeft() {
+    public void testTurnLeft() {
         // Arrange
         LawnMower lawnMower = new LawnMower(1, 2, Orientation.N);
 
@@ -106,7 +107,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testMultipleInstructions() {
+    public void testMultipleInstructions() {
         // Arrange
         LawnMower lawnMower = new LawnMower(1, 2, Orientation.N);
 
@@ -118,7 +119,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testMoveOutOfBounds() {
+    public void testMoveOutOfBounds() {
         // Arrange
         LawnMower lawnMower = new LawnMower(0, 0, Orientation.S);
 
@@ -130,7 +131,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testHandlingOfTwoMowersWithMower1ReachingBounds() {
+    public void testHandlingOfTwoMowersWithMower1ReachingBounds() {
         // Arrange
         LawnMower mower1 = new LawnMower(1, 2, Orientation.N);
         LawnMower mower2 = new LawnMower(3, 3, Orientation.E);
@@ -145,7 +146,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testHandlingOfFiveMowers() {
+    public void testHandlingOfFiveMowers() {
         // Arrange
         LawnMower[] mowers = {
                 new LawnMower(1, 2, Orientation.N),
@@ -171,7 +172,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testUpperBounds() {
+    public void testUpperBounds() {
         // Arrange
         LawnMower lawnMower = new LawnMower(5, 5, Orientation.N);
 
@@ -183,7 +184,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testLowerBounds() {
+    public void testLowerBounds() {
         // Arrange
         LawnMower lawnMower = new LawnMower(0, 0, Orientation.N);
 
@@ -195,7 +196,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testTurnAtUpperBounds() {
+    public void testTurnAtUpperBounds() {
         // Arrange
         LawnMower lawnMower = new LawnMower(5, 5, Orientation.N);
 
@@ -207,7 +208,7 @@ class LawnMowerTest {
     }
 
     @Test
-    void testTurnAtLowerBounds() {
+    public void testTurnAtLowerBounds() {
         // Arrange
         LawnMower lawnMower = new LawnMower(0, 0, Orientation.N);
 

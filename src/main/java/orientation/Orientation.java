@@ -1,4 +1,4 @@
-package main.java.orientation;
+package orientation;
 
 // Énumération représentant les orientations (N, E, S, W)
 public enum Orientation {

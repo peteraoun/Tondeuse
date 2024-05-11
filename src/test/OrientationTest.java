@@ -1,13 +1,15 @@
-package main.java.test;
+package test;
 
-import main.java.orientation.Orientation;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import orientation.Orientation;
 
-class OrientationTest {
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
+
+public class OrientationTest {
 
     @Test
-    void testTurnRight() {
+    public void testTurnRight() {
         // Test de rotation à droite depuis chaque orientation
         assertEquals(Orientation.E, Orientation.N.turnRight());
         assertEquals(Orientation.S, Orientation.E.turnRight());
@@ -16,7 +18,7 @@ class OrientationTest {
     }
 
     @Test
-    void testTurnLeft() {
+    public void testTurnLeft() {
         // Test de rotation à gauche depuis chaque orientation
         assertEquals(Orientation.W, Orientation.N.turnLeft());
         assertEquals(Orientation.N, Orientation.E.turnLeft());
